@@ -16,7 +16,7 @@ import com.smba.api.billingAppBackend.model.Product;
 import com.smba.api.billingAppBackend.repository.ProductRepository;
 import com.smba.api.billingAppBackend.service.ProductService;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins = "http://localhost:19006", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 @RestController
 @RequestMapping("/api/product")
 public class ProductController {

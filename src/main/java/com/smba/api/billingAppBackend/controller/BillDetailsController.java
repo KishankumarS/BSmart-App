@@ -14,11 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.smba.api.billingAppBackend.model.BillDetails;
-import com.smba.api.billingAppBackend.model.Inventory;
 import com.smba.api.billingAppBackend.repository.BillDetailsRepository;
 import com.smba.api.billingAppBackend.service.BillDetailsService;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins = "http://localhost:19006", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 @RestController
 @RequestMapping("/api/billDetails")
 public class BillDetailsController {

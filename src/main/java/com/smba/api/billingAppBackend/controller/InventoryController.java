@@ -16,7 +16,7 @@ import com.smba.api.billingAppBackend.model.Inventory;
 import com.smba.api.billingAppBackend.repository.InventoryRepository;
 import com.smba.api.billingAppBackend.service.InventoryService;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins = "http://localhost:19006", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 @RestController
 @RequestMapping("/api/productlist")
 public class InventoryController  {
