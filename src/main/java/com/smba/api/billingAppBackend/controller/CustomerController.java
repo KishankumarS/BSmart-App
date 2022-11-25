@@ -17,6 +17,7 @@ import com.smba.api.billingAppBackend.model.Customer;
 import com.smba.api.billingAppBackend.repository.CustomerRepository;
 import com.smba.api.billingAppBackend.service.CustomerService;
 
+@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
 @RestController
 @RequestMapping("/api/customer")
 public class CustomerController {
