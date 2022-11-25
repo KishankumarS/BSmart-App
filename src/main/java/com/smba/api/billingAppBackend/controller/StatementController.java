@@ -16,7 +16,7 @@ import com.smba.api.billingAppBackend.model.Statements;
 import com.smba.api.billingAppBackend.repository.StatementsRepository;
 import com.smba.api.billingAppBackend.service.StatementService;
 
-@CrossOrigin(origins= {"*"}, maxAge = 4800, allowCredentials = "false" )
+@CrossOrigin(origins = "http://localhost:19006", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 @RestController
 @RequestMapping("/api/statements")
 public class StatementController {
