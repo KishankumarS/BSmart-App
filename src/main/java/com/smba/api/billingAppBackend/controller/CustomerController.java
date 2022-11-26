@@ -17,7 +17,6 @@ import com.smba.api.billingAppBackend.model.Customer;
 import com.smba.api.billingAppBackend.repository.CustomerRepository;
 import com.smba.api.billingAppBackend.service.CustomerService;
 
-@CrossOrigin(origins = "http://localhost:19006", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
 @RestController
 @RequestMapping("/api/customer")
 public class CustomerController {
