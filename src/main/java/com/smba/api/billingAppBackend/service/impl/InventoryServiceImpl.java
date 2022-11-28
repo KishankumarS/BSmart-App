@@ -31,15 +31,15 @@ public class InventoryServiceImpl implements InventoryService {
 	@Override
 	public Inventory updateInventory(Inventory inventory) {
 		Inventory existingProduct = inventoryRepository.findById(inventory.getId()).orElse(null);
-		existingProduct.setProduct_name(inventory.getProduct_name());
-		existingProduct.setBarcode(inventory.getBarcode());
-		existingProduct.setBrand(inventory.getBrand());
-		existingProduct.setMrp(inventory.getMrp());
-		existingProduct.setSp(inventory.getSp());
-		existingProduct.setCp(inventory.getCp());
+		if(inventory.getProduct_name() != null) {
+			existingProduct.setProduct_name(inventory.getProduct_name());
+			existingProduct.setBarcode(inventory.getBarcode());
+			existingProduct.setBrand(inventory.getBrand());
+			existingProduct.setMrp(inventory.getMrp());
+			existingProduct.setSp(inventory.getSp());
+			existingProduct.setCp(inventory.getCp());
+		}
 		existingProduct.setQuantity(inventory.getQuantity());
 		return inventoryRepository.save(existingProduct);
 	}
-
-	
 }
