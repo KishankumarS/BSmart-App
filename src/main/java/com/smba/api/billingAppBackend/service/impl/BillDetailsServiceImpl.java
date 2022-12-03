@@ -1,5 +1,7 @@
 package com.smba.api.billingAppBackend.service.impl;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.smba.api.billingAppBackend.model.BillDetails;
@@ -29,8 +31,14 @@ private BillDetailsRepository billDetailsRepository;
 	}
 
 	@Override
-	public BillDetails getBillDetails(Long billNo) {
-		return billDetailsRepository.getById(billNo);
+	public BillDetails getBillDetails() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<BillDetails> getBilldetailsforABill(String billNo) {
+		return billDetailsRepository.findByBillNo(billNo);
 	}
 
 }
