@@ -44,7 +44,7 @@ public class InventoryController  {
 	@CrossOrigin
 	@PutMapping(value = "/update", consumes = {"application/json"})
 	public ResponseEntity<Inventory> updateInventory(@RequestBody Inventory inventory){
-			return new ResponseEntity<Inventory>(inventoryService.updateInventory(inventory), HttpStatus.CREATED);
+			return new ResponseEntity<Inventory>(inventoryService.updateInventory(inventory), HttpStatus.OK);
 	}
 	
 	@CrossOrigin

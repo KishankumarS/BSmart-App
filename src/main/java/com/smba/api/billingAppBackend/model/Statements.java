@@ -54,6 +54,7 @@ public class Statements {
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName;
 	}
+	@Column(name="bill_no")
 	private String billNo;
 	
 	@CreationTimestamp

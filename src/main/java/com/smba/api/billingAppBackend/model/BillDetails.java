@@ -93,6 +93,7 @@ public class BillDetails {
 	public void setCustomerName(String customerName) {
 		this.customerName = customerName; 
 	}
+	@Column(name = "bill_no")
 	private String billNo;
 	@CreationTimestamp
 	@Temporal(TemporalType.TIMESTAMP)
