@@ -47,9 +47,8 @@ public class BillDetailsController {
 		
 	}
 	
-	@SuppressWarnings("unchecked")
 	@CrossOrigin
-	@GetMapping("/billno")
+	@GetMapping("/")
 	public ResponseEntity<List<BillDetails>> getAllbilldetailsforABill(@RequestParam String billNo) {
 		return new ResponseEntity<List<BillDetails>>(billDetailsRepository.findByBillNo(billNo), HttpStatus.OK);
 	}
